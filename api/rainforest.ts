@@ -1,5 +1,4 @@
 
-import { log } from "node:console";
 import process from "node:process";
 
 const params = {

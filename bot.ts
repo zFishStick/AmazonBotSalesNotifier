@@ -6,13 +6,14 @@ import { country } from "./data/country.ts";
 import { User } from "./user.ts";
 import { log } from "node:console";
 import { getASIN, setAmazonDomain } from "./api/rainforest.ts";
+import process from "node:process";
 
 interface SessionData {
   __language_code?: string;
 }
 type MyContext = Context & SessionFlavor<SessionData> & I18nFlavor;
 
-const bot = new Bot<MyContext>("8705539363:AAGClO-WlpTlq02XMjIJ6CU-3vD40zVcAfY");
+const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN || "" );
 
 bot.use(session({ initial: () => ({}) }));
 
