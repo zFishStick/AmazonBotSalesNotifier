@@ -1,11 +1,13 @@
 export const country = {
-    US: {
-        US_txt: "United States 🇺🇸",
+    us: {
+        us_txt: "United States 🇺🇸",
         callback_data: "reg_us",
+        amazon_domain: "amazon.com",
     },
-    IT: {
-        IT_txt: "Italy 🇮🇹",
+    it: {
+        it_txt: "Italy 🇮🇹",
         callback_data: "reg_it",
+        amazon_domain: "amazon.it",
     },
     // Add more countries as needed
 }
